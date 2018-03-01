@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "511536954162",
+    "firebase_url": "https://ase-ass.firebaseio.com",
+    "project_id": "ase-ass",
+    "storage_bucket": "ase-ass.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511536954162:android:540510a3648777dd",
+        "android_client_info": {
+          "package_name": "com.example.shara.labass3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511536954162-f5dkomjibehgniebpd15p1enam8ia254.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBKut6JDcGyYEwln27QNaItmhFfw9b3l0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511536954162:android:87fcb66cc6ca320a",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511536954162-f5dkomjibehgniebpd15p1enam8ia254.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBKut6JDcGyYEwln27QNaItmhFfw9b3l0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
