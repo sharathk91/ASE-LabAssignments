@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <script src="ng-cordova.js"></script>
+  <script src="cordova.js"></script>
+  <script src="ocrad.js"></script>
+
+  <script src="js/ocrplugin.js"></script>
+</head>
+<body ng-app="starter">
+
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+    <h1 class="title"> OCR Detection </h1>
+  </ion-header-bar>
+  <ion-content ng-controller="CaptureCtrl">
+
+    <img style="width: 100%;" id="pic" src="">
+
+    <div class="padding">
+
+      <button ng-click="upload()" class="button button-full button-positive">
+        Take Photo
+      </button> <br/>
+
+      <button ng-click="choose()" class="button button-full button-positive">
+        Choose Photo
+      </button> <br/>
+
+      <button ng-click="testOcrad()" id="Analyse" class="button button-full button-positive" style="display: none">
+        Analyse Text
+      </button><br/>
+
+      <button onclick="location.href = 'index.html';"  class="button button-full button-positive">
+        Logout
+      </button>
+
+    </div>
+
+  </ion-content>
+</ion-pane>
+</body>
+</html>

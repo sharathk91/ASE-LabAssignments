@@ -1,0 +1,49 @@
+{
+  "name": "ase_lab_ass_4",
+  "version": "0.0.1",
+  "description": "An Ionic project",
+  "devDependencies": {
+    "angular-mocks": "^1.6.9",
+    "gulp": "^3.5.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "file:node_modules/karma-phantomjs-launcher",
+    "phantomjs": "^2.1.7"
+  },
+  "dependencies": {
+    "angular": "^1.6.9",
+    "clarifai": "^2.6.0",
+    "cordova-android": "7.1.0",
+    "cordova-plugin-camera": "^4.0.2",
+    "cordova-plugin-device": "^2.0.1",
+    "cordova-plugin-ionic-keyboard": "^2.0.5",
+    "cordova-plugin-ionic-webview": "^1.1.16",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "firebase": "^4.10.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-camera": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
