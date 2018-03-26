@@ -1,0 +1,43 @@
+<html ng-app="myhome">
+<head>
+  <script src="js/angular.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"/>-->
+  <script src="js/home.js"></script>
+  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/adonespitogo/angular-base64-upload/master/src/angular-base64-upload.js"></script>
+  <link href="home.css" rel="stylesheet"/>
+
+</head>
+<body bgcolor="white">
+<ion-pane>
+
+  <ion-header-bar style="color: saddlebrown">
+    <h3 align="center">Prediction Analysis & CRUD Operations in MongoDB</h3>
+  </ion-header-bar>
+
+  <ion-content>
+    <div ng-controller="home">
+      <div align="right">
+        <input type="button" class="button" onclick="location.href = 'location.html';" value="Location" align="right"/>
+        <input type="button" class="button" onclick="location.href = 'index.html';" value="Logout" align="right"/><br/>
+
+      </div>
+
+      <div align="center">
+        <p style="color: saddlebrown"><b>Visual Recognition</b> </p>
+        <br/>
+        <input type="file"  ng-model="file" name="photo" onchange="angular.element(this).scope().imageUpload(this)" base-sixty-four-input accept="image/*">
+        <img id="img" src="#" alt="your image" width="200" height="200" style="display: none" />
+        <br/><br/>
+        <input type="button" class="button" value="Predict Image" ng-click="upload(file)"/>
+        <br/><br/>
+        <div id="notes" style="color: black"></div>
+      </div>
+
+
+    </div>
+  </ion-content>
+</ion-pane>
+
+</body>
+</html>

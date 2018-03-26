@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link rel="manifest" href="manifest.json">
+    <link href="index.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBa73OCQQllGa4KYK3LrL0Q91ix9SSdfwI",
+    authDomain: "ase-ass.firebaseapp.com",
+    databaseURL: "https://ase-ass.firebaseio.com",
+    projectId: "ase-ass",
+    storageBucket: "ase-ass.appspot.com",
+    messagingSenderId: "511536954162"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body ng-app="login" ng-controller="login">
+<ion-pane>
+
+        <ion-content>
+<br/><br/>
+<div align="center"><h3 style="font-size: 25px;font-weight: bold">ASE LAB 5</h3></div>
+<form ng-submit="insertData()">
+          <div id="wrapper">
+            <div id="wrappertop"></div>
+
+            <div id="wrappermiddle">
+
+              <h2>Login</h2>
+
+              <div id="username_input">
+
+                <div id="username_inputleft"></div>
+
+                <div id="username_inputmiddle">
+                    <input type="text" placeholder="Enter email address" required ng-model="username" name="link" id="url" value="E-mail Address" style="color: black">
+                    <img id="url_user" src="./images/mailicon.png" alt="">
+
+                </div>
+
+                <div id="username_inputright"></div>
+
+              </div>
+
+              <div id="password_input">
+
+                <div id="password_inputleft"></div>
+
+                <div id="password_inputmiddle">
+
+                    <input type="password" required ng-model="password" placeholder="Enter password" name="link" id="url2" value="Password" style="color: black">
+                    <img id="url_password" src="./images/passicon.png" alt="">
+                </div>
+
+                <div id="password_inputright"></div>
+
+              </div>
+
+              <div id="submit">
+                <input type="button" class="button" value="Login" ng-model="login" ng-click="login(username, password)"/><br/><br/>
+                <input type="button" class="button"  value="Register" ng-click="register(username, password)"/>
+              </div>
+
+            </div>
+          </div>
+
+</form>
+        </ion-content>
+
+
+</ion-pane>
+
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script>
+var lati;
+var longi;
+
+
+    function initMap() {
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+function showPosition(position) {
+  lati = position.coords.latitude;
+  longi = position.coords.longitude;
+  document.getElementById("demo").innerHTML = "<b>Latitude:</b> " + lati +
+    "<br/><b>Longitude:</b> " + longi;
+
+  var uluru = {lat: lati , lng: longi};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+
+  var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lati+","+longi+"&result_type=street_address&key=AIzaSyAfgw9klyrWGT4oR6rZH09ffY3KWZRB-Gg";
+    $.getJSON(url, function(response) {
+      console.log(response);
+      document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML +"<br/>"+"<b>Address:</b> "+ response.results[0].formatted_address;
+    });
+
+}
+
+  </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfgw9klyrWGT4oR6rZH09ffY3KWZRB-Gg&callback=initMap">
+  </script>
+  <link href="home.css" rel="stylesheet"/>
+</head>
+<body>
+<h3 align="center">Location Details <div align="right"><input type="button" class="button" onclick="location.href = 'index.html';" value="Logout"/></div></h3>
+<div>
+  <p id="demo" align="left"></p>
+
+
+</div>
+<div id="map"></div>
+
+</body>
+</html>
